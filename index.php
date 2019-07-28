@@ -1,3 +1,9 @@
+<!--
+**index.php
+* Main page for mortage-calculator app
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,62 +14,93 @@
 </head>
 <body>
   <h3>Mortgage Calculator</h3>
-  <div class="form">
-      <form id="form" class="form" action="" onsubmit="return false;" method="post">
-        <fieldset>
-          <legend>Terms</legend>
-            <fieldset>
-              <legend>Down-Payment</legend>
-
-                <div class="block">
-                  <label for="purchasePrice">Purchase Price ($)</label>
-                  <input type="number" id="purchasePrice" name="purchasePrice" class="field" placeholder="What's the purchase price?" value="200000"/>
-                </div>
-                <div class="block">
-                  <label for="percentage">Down Payment</label>
-                  <input type="number"  min="0" max="100" id="percentage" name="percentage" class="field" value="20"/>
-                </div>
-                <div class="block">
-                  <label for="downPayment">Amount</label>
-                  <input name="downPayment" class="field" id="downPayment" name="downPayment" class="field"/>
-                </div>
-            </fieldset>
-            <fieldset>
-              <legend>Mortgage Details</legend>
-                <div class="block">
-                  <label for="mortgageAmount">Mortgage Amount</label>
-                  <input name="mortgageAmount" class="field" id="mortgageAmount" name="mortgageAmount" class="field"/>
-                </div>
-                <div class="block">
-                  <label for="interestRate">Interest Rate</label>
-                  <input type="number"  min="0" max="100" id="interestRate" name="interestRate" class="field" value="5"/>
-                </div>
-                <div class="block">
-                  <label for="period">Period (years)</label>
-                  <input type="number"  min="0" max="30" id="period" name="period" class="field" value="30"/>
-                </div>
-                <div class="block">
-                  <label for="totalCost">Total Cost</label>
-                  <input id="totalCost" name="totalCost" class="field"/>
-                </div>
-                <div class="block">
-                  <label for="monthlyPayment">Monthly Payment</label>
-                  <input id="monthlyPayment" name="monthlyPayment" class="field"/>
-                </div>
-            </fieldset>
-
-            <input type="submit" name="Calculate" id="submit"/>
-            <button name="clear" id="clear">Reset</button>
-        </fieldset>
-      </form>
-  </div>
+  <table>
+    <div class="form">
+        <form id="form" class="form" action="" onsubmit="return false;" method="post">
+                  <tr>
+                    <td>
+                        <label for="purchasePrice">Purchase Price ($)</label>
+                    </td>
+                    <td>
+                        <input id="purchasePrice" type="number" step=".01" name="purchasePrice" class="field right" placeholder="What's the purchase price?" value="200000"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="percentage">Down Payment</label>
+                    </td>
+                    <td>
+                      <input min="0" max="100" id="percentage" name="percentage" type="number" step=".01"  class="field right" value="20"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="downPayment">Amount</label>
+                    </td>
+                    <td>
+                      <input name="downPayment" class="field" id="downPayment"  type="number" step=".01" name="downPayment" class="field right"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="mortgageAmount">Mortgage Amount</label>
+                    </td>
+                    <td>
+                      <input name="mortgageAmount" class="field" id="mortgageAmount"  type="number" step=".01" name="mortgageAmount" class="field right"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="interestRate">Interest Rate</label>
+                    </td>
+                    <td>
+                      <input min="0" max="100" id="interestRate" name="interestRate"  type="number" step=".01" class="field right" value="5"/>
+                    </td>
+                  <tr>
+                    <td>
+                      <label for="period">Period (years)</label>
+                    </td>
+                    <td>
+                      <input type="number" min="0" max="30" id="period" name="period"  type="number" step=".01" class="field right" value="30"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="totalCost">Total Cost</label>
+                    </td>
+                    <td>
+                      <input id="totalCost"  type="number" step=".01" name="totalCost" class="field right"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="monthlyPayment">Monthly Payment</label>
+                    </td>
+                    <td>
+                      <input id="monthlyPayment" type="number" step=".01"  name="monthlyPayment" class="field right"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="submit" name="Calculate" id="submit"/>
+                    </td>
+                    <td>
+                      <button name="clear" id="clear">Reset</button>
+                    </td>
+                  </tr>
+          </table>
+        </form>
+    </div>
+  </table>
 </body>
 <script>
 
 $(document).ready(function(){
   $( "#clear" ).click(function(){
     $( '#form' ).trigger("reset");
+    $( "#downPayment" ).removeAttr('value');
   });
+
   $( "#submit" ).click(function(){
       let downPayment = getDownPayment();
       $("#downPayment").attr('value', downPayment);
