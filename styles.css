@@ -13,13 +13,26 @@ table {
 .field .right {
   text-align: right;
   align-items: right;
+  display: block;
   direction: rtl;
   unicode-bidi: bidi-override;
 }
 
+td input {
+  text-align: right;
+  align-items: right;
+  display: block;
+}
+
+
+
+table input[type=number] {
+  align-items: right;
+}
+
 input[type=number] {
   min-width: 10px;
-  max-width: 100px;
+  max-width: 70px;
   align-items: right;
   text-align: right;
 }
@@ -43,6 +56,20 @@ label {
 .block {
   display: block;
 }
+
+.dollar{
+	display:inline-block;
+	position: relative;
+	}
+.dollar input{
+	padding-left:10px;
+	}
+.dollar:before {
+	position: absolute;
+    content:"$";
+    left:15px;
+	top:2px;
+ 	}
 
 @media only screen and (min-width: 600px) {
   /* For tablets: */
