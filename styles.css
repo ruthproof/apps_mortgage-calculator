@@ -5,9 +5,14 @@
 
 /* For mobile phones: */
 
+html, body table {
+  height: 100%;
+}
 table {
   border: 1px solid black;
-  width: 100;
+  min-height: 100%;
+
+  width: auto;
 }
 
 .field .right {
