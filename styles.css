@@ -15,6 +15,10 @@ table {
   width: auto;
 }
 
+td {
+  border: 0.5px dotted black;
+}
+
 .field .right {
   text-align: right;
   align-items: right;
