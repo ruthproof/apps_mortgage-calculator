@@ -17,8 +17,8 @@ table {
   unicode-bidi: bidi-override;
 }
 
-td input {
-  min-width: 100px;
+input[type=number] {
+  min-width: 10px;
   max-width: 100px;
   align-items: right;
   text-align: right;
