@@ -47,8 +47,6 @@
   return price;
   }
 
-
-
   function getPercentage()
   {
       var theForm = document.forms["form"];
@@ -65,8 +63,11 @@
 $(document).ready(function(){
   $( "#clear" ).click(function(){
     $( '#form' ).trigger("reset");
-    $( "#downPayment" ).val("");
-    // $( "#downPayment" ).text("");
+    // $( "#downPayment" ).val("");
+    $( "#downPayment" ).text("");
+    $( "#mortgageAmount" ).text("");
+    $( "#totalCost" ).text("");
+    $( "#monthlyPayment" ).text("");
 
   });
 
@@ -75,7 +76,9 @@ $(document).ready(function(){
 
       $('#downPayment').text(downPayment);
 
-      $("#mortgageAmount").attr('value', mortgageDifference());
+      let mortgageAmount = "$" + addCommas(mortgageDifference());
+      $("#mortgageAmount").text(mortgageAmount);
+
       // from https://www.issackelly.com/blog/2009/01/11/Simple_JQuery_Mortgage_Calculato
       // $("#mortgageCalc").click(function(){
       var L,P,n,c,dp;
@@ -87,15 +90,17 @@ $(document).ready(function(){
       P = (L*(c*Math.pow(1+c,n)))/(Math.pow(1+c,n)-1);
       if(!isNaN(P))
       {
-      $("#monthlyPayment").val(P.toFixed(2));
+      $("#monthlyPayment").text("$" + addCommas(P.toFixed(2)));
       }
       else
       {
       alert('There was an error');
-      $("#monthlyPayment").val('There was an error');
+      $("#monthlyPayment").text('There was an error');
       }
 
-      $( "#totalCost" ).val(returnTotalCost(c,L,n).toFixed(2));
+      let totalCost = "$" + addCommas(returnTotalCost(c,L,n).toFixed(2));
+      $("#totalCost").text(totalCost);
+
 
       // var x = $('#monthlyPayment').val();
       // $('#monthlyPayment').val(addCommas(x));

@@ -1,9 +1,7 @@
 <!--
 **index.php
 * Main page for mortage-calculator app
-
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +12,6 @@
 </head>
 <body>
   <h3>Mortgage Calculator</h3>
-
   <?php include('table.php'); ?>
 </body>
 <script type="text/javascript" src="scripts.js"></script>

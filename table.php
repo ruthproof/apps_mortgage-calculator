@@ -6,8 +6,12 @@
 <table>
   <div class="form">
       <form id="form" class="form" action="" onsubmit="return false;" method="post">
-        <th>
-        </th>
+        <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th class="table-header"></th>
+        </tr>
           <tr>
             <td>
               <label for="purchasePrice">Purchase Price ($)</label>
@@ -23,7 +27,7 @@
             <td>
               <input min="0" max="100" id="percentage" name="percentage" type="number" step="1"  class="field right" value="20"/>
             </td>
-            <td>Amount</td>
+            <td class="label">Amount</td>
             <td><span name="downPayment" class="field number" id="downPayment" name="downPayment" class="field right"></span/></td>
           </tr>
             <tr>
@@ -33,12 +37,12 @@
               <td>
                 <input min="0" max="100" id="interestRate" name="interestRate"  type="number" step=".01" class="field right" value="5"/>
               </td>
-              <td>
-                <label for="mortgageAmount">Mortgage Amount ($)</label>
+              <td class="label">
+                Mortgage Amount
               </td>
-              <td>
-                <input name="mortgageAmount" class="field number" id="mortgageAmount"  type="number" step=".01" name="mortgageAmount" class="field right"/>
+              <td><span name="mortgageAmount" class="field number" id="mortgageAmount"  type="number" step=".01" name="mortgageAmount" class="field right"></span>
               </td>
+            </tr>
             <tr>
               <td>
                 <label for="period">Period (years)</label>
@@ -46,24 +50,22 @@
               <td>
                 <input type="number" min="0" max="40" id="period" name="period"  type="number" step="5" class="field right" value="15"/>
               </td>
-              <td>
-                <label for="totalCost">Total Cost ($)</label>
+              <td class="label">
+                Total Cost
               </td>
               <td>
-                <input id="totalCost" name="totalCost" class="field right number"/>
+                <span id="totalCost" name="totalCost" class="field right number"></span>
               </td>
             </tr>
             <tr>
 
             </tr>
             <tr>
+              <td></td>
+              <td></td>
+              <td class="label">Monthly Payment</td>
               <td>
-                <label for="monthlyPayment">Monthly Payment ($)</label>
-              </td>
-              <td>
-                <!-- <div class="dollar"> -->
-                  <input id="monthlyPayment" type="number" step=".01"  name="monthlyPayment" class="field right numbers"/>
-                <!-- </div> -->
+                <span id="monthlyPayment" name="monthlyPayment" class="field right numbers"></span>
               </td>
             </tr>
             <tr>
