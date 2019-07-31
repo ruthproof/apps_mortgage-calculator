@@ -7,11 +7,12 @@
 
 table td span {
   min-width: 100px;
+
 }
 
 .table-header {
-  min-width: 150px;
-  max-width: 150px;
+  min-width: 90px;
+  max-width: 90px;
 }
 
 html, body table {
@@ -24,12 +25,25 @@ table {
   width: auto;
 }
 
-td {
-  border: 0.5px dotted black;
+.button {
+  float: right;
+  align-items: center;
 }
 
-td .label {
-  font-size: 8px;
+/* td {
+  border: 0.5px dotted black;
+} */
+
+.label {
+  font-size: 16px;
+  text-align: right;
+  /* border: 1px solid black; */
+}
+
+.output {
+  font-size: 15px;
+  text-align: right;
+  border: 0.25px solid black;
 }
 
 .number {
@@ -38,15 +52,16 @@ td .label {
 }
 
 td input {
+  float: right;
   text-align: right;
   align-items: right;
   display: block;
+
 }
-
-
 
 table input[type=number] {
   align-items: right;
+  padding: 0;
 }
 
 input[type=number] {
@@ -54,6 +69,7 @@ input[type=number] {
   max-width: 70px;
   align-items: right;
   text-align: right;
+  float: right;
 }
 
 .form {
@@ -89,6 +105,11 @@ label {
     left:15px;
 	top:2px;
  	}
+
+.right {
+  text-align: right;
+  float: right;
+}
 
 @media only screen and (min-width: 600px) {
   /* For tablets: */

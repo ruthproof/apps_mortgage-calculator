@@ -28,7 +28,7 @@
               <input min="0" max="100" id="percentage" name="percentage" type="number" step="1"  class="field right" value="20"/>
             </td>
             <td class="label">Amount</td>
-            <td><span name="downPayment" class="field number" id="downPayment" name="downPayment" class="field right"></span/></td>
+            <td class="output"><span name="downPayment" class="field number right" id="downPayment" name="downPayment" class="field right"></span/></td>
           </tr>
             <tr>
               <td>
@@ -40,7 +40,7 @@
               <td class="label">
                 Mortgage Amount
               </td>
-              <td><span name="mortgageAmount" class="field number" id="mortgageAmount"  type="number" step=".01" name="mortgageAmount" class="field right"></span>
+              <td class="output"><span name="mortgageAmount" class="field number right" id="mortgageAmount"  type="number" step=".01" name="mortgageAmount" class="field right"></span>
               </td>
             </tr>
             <tr>
@@ -53,7 +53,7 @@
               <td class="label">
                 Total Cost
               </td>
-              <td>
+              <td class="output">
                 <span id="totalCost" name="totalCost" class="field right number"></span>
               </td>
             </tr>
@@ -64,16 +64,16 @@
               <td></td>
               <td></td>
               <td class="label">Monthly Payment</td>
-              <td>
+              <td class="output">
                 <span id="monthlyPayment" name="monthlyPayment" class="field right numbers"></span>
               </td>
             </tr>
             <tr>
               <td>
-                <input type="submit" name="Calculate" id="submit"/>
+                <input type="submit" name="Calculate" id="submit" class="button"/>
               </td>
               <td>
-                <button name="clear" id="clear">Reset</button>
+                <button name="clear" id="clear" class="button">Reset</button>
               </td>
             </tr>
       </form>
