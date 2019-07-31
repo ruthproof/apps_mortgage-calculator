@@ -23,12 +23,8 @@
             <td>
               <input min="0" max="100" id="percentage" name="percentage" type="number" step="1"  class="field right" value="20"/>
             </td>
-            <td>
-              <label for="downPayment">Amount ($)</label>
-            </td>
-            <td>
-              <input name="downPayment" class="field number" id="downPayment"  type="number" step="100" name="downPayment" class="field right"/>
-            </td>
+            <td>Amount</td>
+            <td><span name="downPayment" class="field number" id="downPayment" name="downPayment" class="field right"></span/></td>
           </tr>
             <tr>
               <td>
