@@ -19,9 +19,9 @@ html, body table {
   height: 100%;
 }
 table {
+  background-color: #d0ddf2;
   border: 1px solid black;
   min-height: 100%;
-
   width: auto;
 }
 
@@ -41,9 +41,15 @@ table {
 }
 
 .output {
+  background-color: white;
   font-size: 15px;
   text-align: right;
   border: 0.25px solid black;
+}
+
+.output span{
+    background-color: white;
+    padding-right: 5%;
 }
 
 .number {
@@ -110,6 +116,8 @@ label {
   text-align: right;
   float: right;
 }
+
+
 
 @media only screen and (min-width: 600px) {
   /* For tablets: */

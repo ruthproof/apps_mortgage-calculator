@@ -9,10 +9,12 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 <meta charset="UTF-8">
 <title>Mortgage Calculator</title>
+<script type="text/javascript" src="./scripts/basictable/jquery.basictable.js"></script>
+<script type="text/javascript" src="./scripts/basictable/jquery.basictable.min.js"></script>
 </head>
 <body>
   <h3>Mortgage Calculator</h3>
   <?php include('table.php'); ?>
 </body>
-<script type="text/javascript" src="scripts.js"></script>
+<script type="text/javascript" src="./scripts.js"></script>
 </html>

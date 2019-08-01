@@ -3,7 +3,7 @@
 * Main page for mortage-calculator app
 
 -->
-<table>
+<table name="calcTable">
   <div class="form">
       <form id="form" class="form" action="" onsubmit="return false;" method="post">
         <tr>
@@ -27,7 +27,7 @@
             <td>
               <input min="0" max="100" id="percentage" name="percentage" type="number" step="1"  class="field right" value="20"/>
             </td>
-            <td class="label">Amount</td>
+            <td class="label">Down Payment</td>
             <td class="output"><span name="downPayment" class="field number right" id="downPayment" name="downPayment" class="field right"></span/></td>
           </tr>
             <tr>
@@ -38,7 +38,7 @@
                 <input min="0" max="100" id="interestRate" name="interestRate"  type="number" step=".01" class="field right" value="5"/>
               </td>
               <td class="label">
-                Mortgage Amount
+                Loan
               </td>
               <td class="output"><span name="mortgageAmount" class="field number right" id="mortgageAmount"  type="number" step=".01" name="mortgageAmount" class="field right"></span>
               </td>
@@ -51,7 +51,7 @@
                 <input type="number" min="0" max="40" id="period" name="period"  type="number" step="5" class="field right" value="15"/>
               </td>
               <td class="label">
-                Total Cost
+                Mortgage
               </td>
               <td class="output">
                 <span id="totalCost" name="totalCost" class="field right number"></span>

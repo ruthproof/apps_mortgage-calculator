@@ -71,12 +71,19 @@ $(document).ready(function(){
 
   });
 
+
+    $( "calcTable" ).basictable();
+
+    $("calcTable-breakpoint" ).basictable({
+      breakpoint: 768,
+    });
+
   $( "#submit" ).click(function(){
       let downPayment = "$" + addCommas(getDownPayment().toFixed());
 
       $('#downPayment').text(downPayment);
 
-      let mortgageAmount = "$" + addCommas(mortgageDifference());
+      let mortgageAmount = "$" + addCommas(mortgageDifference().toFixed());
       $("#mortgageAmount").text(mortgageAmount);
 
       // from https://www.issackelly.com/blog/2009/01/11/Simple_JQuery_Mortgage_Calculato
