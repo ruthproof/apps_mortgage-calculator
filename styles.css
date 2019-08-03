@@ -4,6 +4,14 @@
 } */
 
 /* For mobile phones: */
+/* screen sizes (vertically)
+  smaller than 500px */
+
+h3 {
+  text-align: center;
+  width: 100%;
+  float: right;
+}
 
 table td span {
   min-width: 100px;
