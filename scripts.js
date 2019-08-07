@@ -60,6 +60,20 @@
   return percentage;
   }
 
+  function increment(field){
+    switch(field){
+      case "purchasePrice":
+      //code Block
+        break;
+      default:
+      //code Block
+    }
+
+
+
+
+  }
+
 $(document).ready(function(){
   $( "#clear" ).click(function(){
     $( '#form' ).trigger("reset");
@@ -78,7 +92,24 @@ $(document).ready(function(){
       breakpoint: 768,
     });
 
+  $( "#purchasePriceIncrement" ).click(function(){
+    let curentValue = parseInt($("purchasePrice"));
+    console.log(currentValue);
+    // console.log("test");
+    // console.log($("#purchasePrice").val());
+      // $('#purchasePriceIncrement').val( function(i, oldval) {
+      //     return parseInt( oldval, 10) + 1;
+
+
+    // if(currentValue){
+    //   let newValue = currentValue + 10000;
+    // };
+    // $( "#purchasePrice ").text(newValue);
+  });
+
+
   $( "#submit" ).click(function(){
+      console.log("test");
       let downPayment = "$" + addCommas(getDownPayment().toFixed());
 
       $('#downPayment').text(downPayment);
